@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Core.Sample": {
+      "commandName": "Project",
+      "commandLineArgs": "p0010 p0009 p0008 p0007 p0006 p0005 p0004 p0003 p0002 p0001 missing-integer"
+    }
+  }
+}
