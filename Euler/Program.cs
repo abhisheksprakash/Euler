@@ -12,6 +12,10 @@ namespace Core.Sample
         {
             try
             {
+                IO.Output("--------------------------------------------------------");
+                IO.Output(Assembly.GetEntryAssembly()?.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName);
+                IO.Output("--------------------------------------------------------");
+                
                 foreach (var arg in args)
                 {
                     switch (arg.ToLower())
@@ -70,6 +74,11 @@ namespace Core.Sample
                             var sumOfPrimeBelowInput = 2000000;
                             var sumOfPrimeBelowOutput = new P0010().SumOfPrimeBelow(sumOfPrimeBelowInput);
                             IO.Output(string.Format("The sum of all primes below {0}: {1}", sumOfPrimeBelowInput, sumOfPrimeBelowOutput));
+                            break;
+                        case "p0011":
+                            var largestProdInGridInput = 4;
+                            var largestProdInGridOutput = new P0011().LargestProductOfGrid(largestProdInGridInput);
+                            IO.Output(string.Format("The product of the largest sequence of {0} in the grid: {1}", largestProdInGridInput, largestProdInGridOutput));
                             break;
                         default:
                             break;
